@@ -1,0 +1,26 @@
+.aligning-content {
+    margin-top: 300px;
+}
+.mat-input-container {
+    width: 100%;
+}
+.mat-card {
+    padding: 0;
+}
+.mat-card-header {
+    background-color: #26a69a;
+    padding: 16px 24px 0 16px;
+}
+.mat-card-header .mat-card-title {
+    font-size: 18px;
+}
+.mat-card-content {
+    padding: 12px 24px 0 24px;
+}
+.mat-card-actions {
+    padding: 0 24px 9px 24px !important;
+    text-align: right;
+}
+.btn-custom {
+    background-color: #26a69a;
+}

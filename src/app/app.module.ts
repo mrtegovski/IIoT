@@ -3,13 +3,15 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import { MdInputModule, MdDatepickerModule, MdNativeDateModule } from '@angular/material';
+import { MdInputModule, MdDatepickerModule, MdNativeDateModule, MdButtonModule, MdCardModule } from '@angular/material';
  
 import { AppComponent } from './app.component';
+import { LoginPageComponent } from './login-page/login-page.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LoginPageComponent
   ],
   imports: [
     BrowserModule,
@@ -18,7 +20,9 @@ import { AppComponent } from './app.component';
     BrowserAnimationsModule,
     MdInputModule,
     MdDatepickerModule,
-    MdNativeDateModule
+    MdNativeDateModule,
+    MdButtonModule,
+    MdCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,4 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~bootstrap/dist/css/bootstrap.css';
-@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+@import '~@angular/material/prebuilt-themes/teal-pink.css';
 
+
+body {
+    background-color: #ECEFF1;
+}
+.mat-input-placeholder {
+    font-weight: 300;
+}
