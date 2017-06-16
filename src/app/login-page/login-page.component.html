@@ -6,15 +6,21 @@
           <md-card-title class="text-center">Please Log in</md-card-title>
         </md-card-header>
         <md-card-content>
-          <md-input-container>
-            <input mdInput placeholder="Email" type="email" value="">
-          </md-input-container>
-          <md-input-container>
-            <input mdInput placeholder="Password" type="password" value="">
-          </md-input-container>
+          <form [formGroup]="form">
+            <md-input-container>
+              <input mdInput formControlName="email" placeholder="Email" type="email" value="">
+              <md-hint *ngIf="form.controls.email.touched && form.controls.email.invalid" class="text-red">Please enter valid email address</md-hint>
+            </md-input-container>
+            <md-input-container>
+              <input mdInput formControlName="password" placeholder="Password" type="password" value="">
+            </md-input-container>
+          </form>
         </md-card-content>
         <md-card-actions>
-          <button md-raised-button class="btn-custom">Log in</button>
+          <div class="invalid-message">
+            <md-hint *ngIf="invalidUser" class="text-red">Invalid username or password</md-hint>
+          </div>
+          <button md-raised-button class="btn-custom" (click)="logIn()">Log in</button>
         </md-card-actions>
       </md-card>
     </div>

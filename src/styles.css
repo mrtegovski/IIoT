@@ -9,3 +9,6 @@ body {
 .mat-input-placeholder {
     font-weight: 300;
 }
+.text-red {
+    color: #f44336;
+}

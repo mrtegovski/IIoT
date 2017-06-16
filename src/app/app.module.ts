@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { MdInputModule, MdDatepickerModule, MdNativeDateModule, MdButtonModule, MdCardModule } from '@angular/material';
@@ -22,7 +22,8 @@ import { LoginPageComponent } from './login-page/login-page.component';
     MdDatepickerModule,
     MdNativeDateModule,
     MdButtonModule,
-    MdCardModule
+    MdCardModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
