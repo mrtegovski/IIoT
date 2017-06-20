@@ -16,7 +16,7 @@ import {
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  public loading: boolean = false;
+  public hiddeLoader: boolean = false;
 
   constructor(private router: Router) {
 
@@ -28,18 +28,18 @@ export class AppComponent {
   navigationInterceptor(event: RouterEvent): void {
     debugger;
     if (event instanceof NavigationStart) {
-      this.loading = false;
+      this.hiddeLoader = false;
     }
     if (event instanceof NavigationEnd) {
-      setTimeout(() => this.loading = true, 100);
+      setTimeout(() => this.hiddeLoader = true, 100);
     }
 
     // Set loading state to false in both of the below events to hide the spinner in case a request fails
     if (event instanceof NavigationCancel) {
-      this.loading = false;
+      this.hiddeLoader = false;
     }
     if (event instanceof NavigationError) {
-      this.loading = false;
+      this.hiddeLoader = false;
     }
 
   }
