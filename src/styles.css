@@ -12,3 +12,9 @@ body {
 .text-red {
     color: #f44336;
 }
+.visibility-hidden {
+    visibility: hidden;
+}
+.mat-progress-bar-buffer {
+    background-color: #b2dfdb
+}

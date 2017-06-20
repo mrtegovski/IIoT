@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, FormControl, Validators } from "@angular/forms"
 import { Http } from "@angular/http";
 import { UsersService } from "app/login-page/users.service";
 import { Router } from "@angular/router";
+import { AppComponent } from "app/app.component";
 
 @Component({
   selector: 'app-login-page',
@@ -13,10 +14,12 @@ export class LoginPageComponent {
   invalidUser = false;
   form: FormGroup;
 
+
   constructor(
     private formBuilder: FormBuilder, 
     private uService: UsersService,
-    private router: Router
+    private router: Router,
+    private ac: AppComponent
     ) {
     let userEmail = '';
     let userPassword = '';
@@ -26,10 +29,12 @@ export class LoginPageComponent {
     });
   }
   logIn() {
+    this.ac.loading = false;
     debugger;
     this.uService.getUser().subscribe((data: any) => {
       if (data.email == this.form.value.email && data.password == this.form.value.password) {
         this.router.navigate(['home']);
+        return;
       }
       return this.invalidUser = true;
     });
