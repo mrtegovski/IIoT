@@ -29,14 +29,14 @@ export class LoginPageComponent {
     });
   }
   logIn() {
-    this.ac.hiddeLoader = false;
+    this.ac.hideLoader = false;
     debugger;
     this.uService.getUser().subscribe((data: any) => {
       if (data.email == this.form.value.email && data.password == this.form.value.password) {
         this.router.navigate(['home']);
         return;
       }
-      this.ac.hiddeLoader = true;
+      this.ac.hideLoader = true;
       return this.invalidUser = true;
     });
   }

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import {
   Router,
   // import as RouterEvent to avoid confusion with the DOM Event
@@ -6,7 +6,8 @@ import {
   NavigationStart,
   NavigationEnd,
   NavigationCancel,
-  NavigationError
+  NavigationError,
+  ActivatedRoute
 } from '@angular/router';
 
 
@@ -15,10 +16,11 @@ import {
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  public hiddeLoader: boolean = false;
+export class AppComponent implements OnInit {
+  public hideLoader: boolean = false;
+  public showNav: boolean = true;
 
-  constructor(private router: Router) {
+  constructor(private router: Router, private activRout: ActivatedRoute) {
 
     router.events.subscribe((event: RouterEvent) => {
       this.navigationInterceptor(event);
@@ -26,21 +28,23 @@ export class AppComponent {
   }
   // Shows and hides the loading spinner during RouterEvent changes
   navigationInterceptor(event: RouterEvent): void {
-    debugger;
     if (event instanceof NavigationStart) {
-      this.hiddeLoader = false;
+      this.hideLoader = false;
     }
     if (event instanceof NavigationEnd) {
-      setTimeout(() => this.hiddeLoader = true, 100);
+      setTimeout(() => this.hideLoader = true, 100);
     }
-
     // Set loading state to false in both of the below events to hide the spinner in case a request fails
     if (event instanceof NavigationCancel) {
-      this.hiddeLoader = false;
+      this.hideLoader = false;
     }
     if (event instanceof NavigationError) {
-      this.hiddeLoader = false;
+      this.hideLoader = false;
     }
 
   }
+  ngOnInit() {
+  
+  }
+
 }
