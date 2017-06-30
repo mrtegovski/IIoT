@@ -18,7 +18,7 @@ import {
 })
 export class AppComponent implements OnInit {
   public hideLoader: boolean = false;
-  public showNav: boolean = true;
+  public showNav: boolean = false;
 
   constructor(private router: Router, private activRout: ActivatedRoute) {
 

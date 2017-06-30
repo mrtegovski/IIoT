@@ -13,7 +13,7 @@ body {
     color: #f44336;
 }
 .visibility-hidden {
-    visibility: hidden;
+    visibility: hidden !important;
 }
 .mat-progress-bar-buffer {
     background-color: #b2dfdb

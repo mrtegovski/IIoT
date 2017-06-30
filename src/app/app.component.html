@@ -1,5 +1,12 @@
-<md-progress-bar mode="indeterminate" style="height: 2.5px" [ngClass]='{"visibility-hidden": hideLoader}'></md-progress-bar>
-<nav class="navbar navbar-default navbar-fixed-top" *ngIf="showNav">
+<md-progress-bar mode="indeterminate" style="height: 2.5px; position: absolute;" [ngClass]='{"visibility-hidden": hideLoader}'
+    color="accent"></md-progress-bar>
+<md-toolbar color="primary">
+    <button md-button class="btn-menu" (click)="sidenav.toggle()">
+        <md-icon><svg xmlns="http://www.w3.org/2000/svg" focusable="false" viewBox="0 0 24 24"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path></svg></md-icon>
+    </button>
+    <div>IIoT</div>
+</md-toolbar>
+<!--<nav class="navbar navbar-default navbar-fixed-top" *ngIf="showNav">
     <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
@@ -18,7 +25,22 @@
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
-        <!--/.nav-collapse -->
+        /.nav-collapse 
     </div>
-</nav>
-<router-outlet></router-outlet>
+</nav>-->
+<md-sidenav-container>
+    <md-sidenav #sidenav mode="side" opened="true">
+        <div>
+            <h2><md-icon>home</md-icon>Home</h2>
+        </div>
+        <div>
+            <h2>Alerts</h2>
+        </div>
+        <div>
+            <h2>Setings</h2>
+        </div>
+    </md-sidenav>
+    <section style="min-height: 100vh">
+        <router-outlet></router-outlet>
+    </section>
+</md-sidenav-container>

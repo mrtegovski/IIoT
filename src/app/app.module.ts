@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import { MdInputModule, MdDatepickerModule, MdNativeDateModule, MdButtonModule, MdCardModule, MdProgressBarModule, MdCheckboxModule } from '@angular/material';
+import { MdInputModule, MdDatepickerModule, MdNativeDateModule, MdButtonModule, MdCardModule, MdProgressBarModule, MdCheckboxModule, MdToolbarModule, MdSidenavModule, MdIconModule } from '@angular/material';
  
 import { AppComponent } from './app.component';
 import { LoginPageComponent } from './login-page/login-page.component';
@@ -29,6 +29,9 @@ import { HomePageComponent } from './home-page/home-page.component';
     MdCardModule,
     MdProgressBarModule,
     MdCheckboxModule,
+    MdToolbarModule,
+    MdSidenavModule,
+    MdIconModule,
     ReactiveFormsModule,
     appRouting
   ],

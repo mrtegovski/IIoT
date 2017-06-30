@@ -1,0 +1,18 @@
+/*md-sidenav-container {
+    z-index: -1;
+}*/
+md-sidenav {
+    min-width: 220px;
+    background-color: #90a4ae;
+    top: 64px;
+}
+
+md-toolbar {
+    padding-left: 0 !important;
+    box-shadow:  0 2px 5px 0 rgba(0,0,0,.3);
+    position: fixed;
+    z-index: 10;
+}
+.btn-menu {
+    height: 64px;
+}
