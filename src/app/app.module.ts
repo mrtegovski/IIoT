@@ -10,12 +10,14 @@ import { LoginPageComponent } from './login-page/login-page.component';
 import { UsersService } from "app/login-page/users.service";
 import { appRouting } from "app/app.routing";
 import { HomePageComponent } from './home-page/home-page.component';
+import { NavMenuComponent } from './nav-menu/nav-menu.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginPageComponent,
-    HomePageComponent
+    HomePageComponent,
+    NavMenuComponent
   ],
   imports: [
     BrowserModule,

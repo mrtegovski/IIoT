@@ -1,36 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~bootstrap/dist/css/bootstrap.css';
 @import '~@angular/material/prebuilt-themes/teal-pink.css';
-
-
-body {
-    background-color: #ECEFF1;
-}
-.mat-input-placeholder {
-    font-weight: 300;
-}
-.text-red {
-    color: #f44336;
-}
-.visibility-hidden {
-    visibility: hidden !important;
-}
-.mat-progress-bar-buffer {
-    background-color: #b2dfdb
-}
-.mat-checkbox-inner-container.mat-checkbox-inner-container {
-    height: 15px;
-    width: 15px;
-}
-.mat-checkbox-ripple.mat-checkbox-ripple {
-    left: -10px;
-    top: -10px;
-    right: -10px;
-    bottom: -10px;
-}
-.mat-checkbox-layout .mat-checkbox-label {
-    font-size: 12px;
-}
 input:-webkit-autofill {
     -webkit-box-shadow: 0 0 0 30px white inset;
     box-shadow: 0 0 0 30px white inset;
