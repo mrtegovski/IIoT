@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import {
   Router,
   // import as RouterEvent to avoid confusion with the DOM Event
@@ -9,14 +9,15 @@ import {
   NavigationError,
   ActivatedRoute
 } from '@angular/router';
-
+import { MdSidenav } from "@angular/material";
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-header',
+  templateUrl: './header.component.html',
+  styleUrls: ['./header.component.css']
 })
-export class AppComponent implements OnInit {
+export class HeaderComponent implements OnInit {
+  @ViewChild("sidenav") sidenav: MdSidenav;
   public hideLoader: boolean = false;
 
   constructor(private router: Router, private activRout: ActivatedRoute) {
@@ -40,10 +41,13 @@ export class AppComponent implements OnInit {
     if (event instanceof NavigationError) {
       this.hideLoader = false;
     }
-
   }
-  ngOnInit() {
 
+  toggleNav(){
+    console.log(this.sidenav);
+  }
+
+  ngOnInit() {
   }
 
 }

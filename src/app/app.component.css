@@ -7,12 +7,6 @@
 .text-red {
     color: #f44336;
 }
-.visibility-hidden {
-    visibility: hidden !important;
-}
-.mat-progress-bar-buffer {
-    background-color: #b2dfdb
-}
 .mat-checkbox-inner-container.mat-checkbox-inner-container {
     height: 15px;
     width: 15px;
@@ -26,21 +20,10 @@
 .mat-checkbox-layout .mat-checkbox-label {
     font-size: 12px;
 }
-
 md-sidenav {
     min-width: 220px;
     background-color: #90a4ae;
     top: 64px;
     box-shadow: 6px 0px 6px 0 rgba(0,0,0,.1);
     height: calc(100vh - 64px);
-}
-
-md-toolbar {
-    padding-left: 0 !important;
-    box-shadow:  0 2px 5px 0 rgba(0,0,0,.3);
-    position: fixed;
-    z-index: 10;
-}
-.btn-menu {
-    height: 64px;
 }

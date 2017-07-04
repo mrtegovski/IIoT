@@ -1,0 +1,15 @@
+.visibility-hidden {
+    visibility: hidden !important;
+}
+.mat-progress-bar-buffer {
+    background-color: #b2dfdb
+}
+md-toolbar {
+    padding-left: 0 !important;
+    box-shadow:  0 2px 5px 0 rgba(0,0,0,.3);
+    position: fixed;
+    z-index: 10;
+}
+.btn-menu {
+    height: 64px;
+}
