@@ -39,7 +39,7 @@ import { HeaderComponent } from './header/header.component';
     ReactiveFormsModule,
     appRouting
   ],
-  providers: [UsersService],
+  providers: [UsersService, HeaderComponent,AppComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

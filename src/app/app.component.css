@@ -1,25 +1,7 @@
 /*md-sidenav-container {
     z-index: -1;
 }*/
-.mat-input-placeholder {
-    font-weight: 300;
-}
-.text-red {
-    color: #f44336;
-}
-.mat-checkbox-inner-container.mat-checkbox-inner-container {
-    height: 15px;
-    width: 15px;
-}
-.mat-checkbox-ripple.mat-checkbox-ripple {
-    left: -10px;
-    top: -10px;
-    right: -10px;
-    bottom: -10px;
-}
-.mat-checkbox-layout .mat-checkbox-label {
-    font-size: 12px;
-}
+
 md-sidenav {
     min-width: 220px;
     background-color: #90a4ae;

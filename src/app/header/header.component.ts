@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import {
   Router,
   // import as RouterEvent to avoid confusion with the DOM Event
@@ -10,17 +10,21 @@ import {
   ActivatedRoute
 } from '@angular/router';
 import { MdSidenav } from "@angular/material";
+import { AppComponent } from "app/app.component";
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent{
   @ViewChild("sidenav") sidenav: MdSidenav;
   public hideLoader: boolean = false;
 
-  constructor(private router: Router, private activRout: ActivatedRoute) {
+  constructor(
+    private router: Router,
+    private activRout: ActivatedRoute,
+    private ac: AppComponent) {
 
     router.events.subscribe((event: RouterEvent) => {
       this.navigationInterceptor(event);
@@ -37,6 +41,7 @@ export class HeaderComponent implements OnInit {
     // Set loading state to false in both of the below events to hide the spinner in case a request fails
     if (event instanceof NavigationCancel) {
       this.hideLoader = false;
+      console.log(this.hideLoader);
     }
     if (event instanceof NavigationError) {
       this.hideLoader = false;
@@ -44,10 +49,6 @@ export class HeaderComponent implements OnInit {
   }
 
   toggleNav(){
-    console.log(this.sidenav);
+    this.ac.sidenav.toggle();
   }
-
-  ngOnInit() {
-  }
-
 }
