@@ -9,7 +9,6 @@ import {
   NavigationError,
   ActivatedRoute
 } from '@angular/router';
-import { MdSidenav } from "@angular/material";
 import { AppComponent } from "app/app.component";
 
 @Component({
@@ -18,7 +17,6 @@ import { AppComponent } from "app/app.component";
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent{
-  @ViewChild("sidenav") sidenav: MdSidenav;
   public hideLoader: boolean = false;
 
   constructor(
@@ -47,7 +45,6 @@ export class HeaderComponent{
       this.hideLoader = false;
     }
   }
-
   toggleNav(){
     this.ac.sidenav.toggle();
   }

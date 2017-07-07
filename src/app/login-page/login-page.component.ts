@@ -29,9 +29,7 @@ export class LoginPageComponent {
     });
   }
   logIn() {
-    debugger;
     this.hc.hideLoader = false;
-    console.log(this.hc.hideLoader);
     this.uService.getUser().subscribe((data: any) => {
       if (data.email == this.form.value.email && data.password == this.form.value.password) {
         this.router.navigate(['home']);
